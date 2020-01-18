@@ -1,0 +1,25 @@
+<!doctype HTML>
+
+<html>
+    <!-- Loading ARjs and Aframe libraries to initiate AR -->
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    
+    <!-- Body of page containing main AR code -->
+    <body style='margin : 0px; overflow: hidden;'>
+        <a-scene embedded arjs>
+        <a-marker preset="hiro">
+
+            <!--  -->
+            <a-entity 
+                gltf-model="url(./assets/box_blender.gltf)"
+                scale="0.8 0.8 0.8">
+            </a-entity>
+
+            <!-- <a-box position='0 0.5 0' material='color: yellow;'></a-box> -->
+        </a-marker>
+        <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>

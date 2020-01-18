@@ -1,0 +1,11 @@
+{
+    "liveServer.settings.port": 5501,
+    "liveServer.settings.root": "/",
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.https": {
+      "enable": true,
+      "cert": "/Users/nasir/Desktop/ARtest/https/localhost.pem",
+      "key": "/Users/nasir/Desktop/ARtest/https/localhost.key",
+      "passphrase": "helloworld"
+    }
+}
