@@ -4,21 +4,70 @@
     <!-- Loading ARjs and Aframe libraries to initiate AR -->
     <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
-    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-    
+    <!-- <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> -->
+    <script src="./index.js"></script>
+
     <!-- Body of page containing main AR code -->
     <body style='margin : 0px; overflow: hidden;'>
-        <a-scene embedded arjs>
-        <a-marker preset="hiro">
+        <a-scene embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false;'>
 
-            <!--  -->
-            <a-entity 
-                gltf-model="url(./assets/box_blender.gltf)"
-                scale="0.8 0.8 0.8">
-            </a-entity>
+            <a-marker id="stable" preset="custom" type="pattern" url="./assets/patterns/SkyStables.patt">
+                <a-video rotation="-90 0 0" id="video" src="./assets/final_vid.mp4" width="4" height="3.375"></a-video>
+            </a-marker>
 
-            <!-- <a-box position='0 0.5 0' material='color: yellow;'></a-box> -->
-        </a-marker>
+            <a-marker id="live" preset="custom" type="pattern" url="./assets/patterns/LiveAnimals.patt">
+                    <a-entity
+                        gltf-model="url(./assets/models/LiveAnimals.gltf)"
+                        scale="0.1 0.1 0.1" 
+                        position="0 0 0" 
+                    >
+                    </a-entity>
+            </a-marker>
+
+            <a-marker id="two" preset="custom" type="pattern" url="./assets/patterns/1.patt">
+                <a-entity rotation="-90 0 0" >
+                    <a-entity
+                        gltf-model="url(./assets/models/Flyer1.gltf)"
+                        scale="1 1 1" 
+                        position="0 0 0"  
+                    >
+                    </a-entity>
+                </a-entity>
+            </a-marker>
+
+            <a-marker id="two" preset="custom" type="pattern" url="./assets/patterns/2.patt">
+                <a-entity rotation="-90 0 0" >
+                    <a-entity
+                        gltf-model="url(./assets/models/Flyer2.gltf)"
+                        scale="1 1 1" 
+                        position="0 0 0"  
+                    >
+                    </a-entity>
+                </a-entity>
+            </a-marker>
+
+            <a-marker id="three" preset="custom" type="pattern" url="./assets/patterns/3.patt">
+                <a-entity rotation="-90 0 0" >
+                    <a-entity
+                        gltf-model="url(./assets/models/Flyer3.gltf)"
+                        scale="0.5 0.5 0.5" 
+                        position="0 0 0" 
+                    >
+                    </a-entity>
+                </a-entity>
+            </a-marker>
+
+            <a-marker id="four" preset="custom" type="pattern" url="./assets/patterns/4.patt">
+                <a-entity rotation="-90 0 0" >
+                    <a-entity
+                        gltf-model="url(./assets/models/Flyer4.gltf)"
+                        scale="1 1 1" 
+                        position="0 0 0" 
+                    >
+                    </a-entity>
+                </a-entity>
+            </a-marker>
+        
         <a-entity camera></a-entity>
         </a-scene>
     </body>
