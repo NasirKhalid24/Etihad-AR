@@ -11,9 +11,12 @@
     <body style='margin : 0px; overflow: hidden;'>
         <a-scene embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false;'>
 
+            <a-assets>
+                <video src="./assets/final_vid.mp4" preload="auto" id="vid" response-type="arraybuffer" loop="true" autoplay type="video/mp4" crossorigin webkit-playsinline playsinline controls>                </video>
+            </a-assets>  
             
             <a-marker id="stable" preset="custom" type="pattern" url="./assets/patterns/SkyStables.patt">
-                <a-video rotation="-90 0 0" id="video" src="./assets/final_vid.mp4" width="4" height="3.375"></a-video>
+                <a-video src="#vid" controls rotation="-90 0 0" id="video" width="4" height="3.375" play="true"></a-video>
             </a-marker>
 
             <a-marker id="live" preset="custom" type="pattern" url="./assets/patterns/LiveAnimals.patt">
